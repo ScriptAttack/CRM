@@ -1,6 +1,5 @@
 getgenv().orbEvent = true
 getgenv().rebirthEvent = true
-getgenv().Gem = true
 
 spawn(function()
     while getgenv().orbEvent == true do
@@ -27,7 +26,7 @@ end
 end)
 
 spawn(function()
-    while getgenv().Gem == true do
+    while getgenv().orbEvent == true do
         local args = {
     [1] = "collectOrb",
     [2] = "Gems",
