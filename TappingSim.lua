@@ -8,7 +8,9 @@ local UICorner_3 = Instance.new("UICorner")
 local D1 = Instance.new("TextButton")
 local UICorner_4 = Instance.new("UICorner")
 local remotepath = game:GetService("ReplicatedStorage")
-
+getgenv().Rebirth = false
+getgenv().Tap = false
+	
 ScreenGui.Parent = game.CoreGui
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
@@ -37,7 +39,11 @@ B1.Text = "Auto Click"
 B1.TextColor3 = Color3.fromRGB(255, 2, 2)
 B1.TextSize = 14.000
 B1.MouseButton1Down:connect(function()
-	getgenv().Tap = false
+    if getgenv().Tap == false then
+        getgenv().Tap= true
+    elseif getgenv().Tap == true then
+        getgenv().Tap = false
+    end
 
 	spawn(function()
 		while getgenv().Tap == true do
@@ -46,11 +52,7 @@ B1.MouseButton1Down:connect(function()
 			wait()       
 		end  
 	end)
-    if getgenv().Tap == false then
-        getgenv().Tap= true
-    elseif getgenv().Tap == true then
-        getgenv().Tap = false
-    end
+
 end)
 
 
@@ -69,20 +71,20 @@ B2.Text = "Auto Rebirth"
 B2.TextColor3 = Color3.fromRGB(255, 2, 2)
 B2.TextSize = 14.000
 B2.MouseButton1Down:connect(function()
-	getgenv().Rebirth = false
-
-	spawn(function ()
-		while getgenv().Rebirth == true do
-			local args = {[1] = 500000}
-			remotepath.Events.Rebirth:FireServer(unpack(args))
-			wait()
-		end
-	end)
     if getgenv().Rebirth == false then
         getgenv().Rebirth = true
     elseif getgenv().Rebirth == true then
         getgenv().Rebirth = false
     end
+
+	spawn(function ()
+		while getgenv().Rebirth == true do
+			local args = {[1] = 1000000}
+			remotepath.Events.Rebirth:FireServer(unpack(args))
+			wait()
+		end
+	end)
+
 end)
 
 UICorner_3.Parent = B2
