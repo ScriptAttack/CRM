@@ -70,7 +70,7 @@ local Window = Rayfield:CreateWindow({
        FileName = "XDKey",
        SaveKey = true,
        GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
-       Key = "L7s6Gt3x"
+       Key = "m2XXkN"
     }
  })
 
