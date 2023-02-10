@@ -62,7 +62,7 @@ local Window = Rayfield:CreateWindow({
        Invite = "ppPYC794pf", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD.
        RememberJoins = false -- Set this to false to make them join the discord every time they load it up
     },
-    KeySystem = true, -- Set this to true to use our key system
+    KeySystem = false, -- Set this to true to use our key system
     KeySettings = {
        Title = "XD Hub",
        Subtitle = "Access Code",
