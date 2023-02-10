@@ -58,7 +58,7 @@ local Window = Rayfield:CreateWindow({
        FileName = "XD Hub"
     },
     Discord = {
-       Enabled = true,
+       Enabled = false,
        Invite = "ppPYC794pf", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD.
        RememberJoins = false -- Set this to false to make them join the discord every time they load it up
     },
@@ -70,7 +70,7 @@ local Window = Rayfield:CreateWindow({
        FileName = "XDKey",
        SaveKey = true,
        GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
-       Key = "m2XXkN"
+       Key = "L7s6Gt3x"
     }
  })
 
@@ -322,7 +322,12 @@ local Button = Tab:CreateButton({
  })
 
 
-
+ local Button = Tab:CreateButton({
+    Name = "Join Discord(Copy Link)",
+    Callback = function()
+      setclipboard("https://discord.gg/ppPYC794pf")
+    end,
+ })
 
 
 
