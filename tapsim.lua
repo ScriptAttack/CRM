@@ -57,11 +57,6 @@ local Window = Rayfield:CreateWindow({
        FolderName = XD, -- Create a custom folder for your hub/game
        FileName = "XD Hub"
     },
-    Discord = {
-       Enabled = false,
-       Invite = "ppPYC794pf", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD.
-       RememberJoins = false -- Set this to false to make them join the discord every time they load it up
-    },
     KeySystem = false, -- Set this to true to use our key system
     KeySettings = {
        Title = "XD Hub",
