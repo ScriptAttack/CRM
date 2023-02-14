@@ -20,16 +20,19 @@ dotap()
 function dopet()
 spawn(function ()
     while pet == true do
-local args = {
-[1] = {
-    [1] = "Crystaliza"
-},
-[2] = "Void Light Egg",
-[3] = 2
-}
+      local args = {
+         [1] = {
+             [1] = "Sun God",
+             [2] = "Sun Warrior",
+             [3] = "Medusa",
+             [4] = "Ancient Statue",
+             [5] = "Brick Waldo"
+         },
+         [2] = "Void Ruins Egg",
+         [3] = 1
+     }
 
-game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("HatchEgg"):InvokeServer(unpack(args))
-
+     game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("HatchEgg"):InvokeServer(unpack(args))     
         wait()
     end
 end)
@@ -82,7 +85,7 @@ local Window = Rayfield:CreateWindow({
  })
 
  local Toggle = Tab:CreateToggle({
-    Name = "Auto Pet(500Dd Void World)",
+    Name = "Auto Pet(1.25Td Void World)",
     CurrentValue = false,
     Flag = "pet1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
     Callback = function(Value)
@@ -301,6 +304,56 @@ local Button = Tab:CreateButton({
     end,
  })
 
+ local Tab = Window:CreateTab("Animation", 4483362458) -- Title, Image
+
+ local Button = Tab:CreateButton({
+   Name = "Ninja Animation",
+   Callback = function()
+      local char = game.Players.LocalPlayer.Character
+      char.Animate.run.RunAnim.AnimationId = "rbxassetid://656118852"
+      char.Animate.walk.WalkAnim.AnimationId = "rbxassetid://656121766"
+      char.Animate.jump.JumpAnim.AnimationId = "rbxassetid://656117878"
+      char.Animate.idle.Animation1.AnimationId = "rbxassetid://656117400"
+      char.Animate.idle.Animation2.AnimationId = "rbxassetid://656118341"
+      char.Animate.fall.FallAnim.AnimationId = "rbxassetid://656115606"
+      char.Animate.swim.Swim.AnimationId = "rbxassetid://656119721"
+      char.Animate.swimidle.SwimIdle.AnimationId = "rbxassetid://656121397"
+      char.Animate.climb.ClimbAnim.AnimationId = "rbxassetid://656114359"
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Werewolf Animation",
+   Callback = function()
+      local char = game.Players.LocalPlayer.Character
+      char.Animate.run.RunAnim.AnimationId = "rbxassetid://1083216690"
+      char.Animate.walk.WalkAnim.AnimationId = "rbxassetid://1083178339"
+      char.Animate.jump.JumpAnim.AnimationId = "rbxassetid://1083218792"
+      char.Animate.idle.Animation1.AnimationId = "rbxassetid://1083195517"
+      char.Animate.idle.Animation2.AnimationId = "rbxassetid://1083214717"
+      char.Animate.fall.FallAnim.AnimationId = "rbxassetid://1083189019"
+      char.Animate.swim.Swim.AnimationId = "rbxassetid://1083222527"
+      char.Animate.swimidle.SwimIdle.AnimationId = "rbxassetid://1083225406"
+      char.Animate.climb.ClimbAnim.AnimationId = "rbxassetid://1083182000"
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Cowboy Animation",
+   Callback = function()
+      local char = game.Players.LocalPlayer.Character
+      char.Animate.run.RunAnim.AnimationId = "rbxassetid://1014401683"
+      char.Animate.walk.WalkAnim.AnimationId = "rbxassetid://1014421541"
+      char.Animate.jump.JumpAnim.AnimationId = "rbxassetid://1014394726"
+      char.Animate.idle.Animation1.AnimationId = "rbxassetid://1014390418"
+      char.Animate.idle.Animation2.AnimationId = "rbxassetid://1014398616"
+      char.Animate.fall.FallAnim.AnimationId = "rbxassetid://1014384571"
+      char.Animate.swim.Swim.AnimationId = "rbxassetid://1014406523"
+      char.Animate.swimidle.SwimIdle.AnimationId = "rbxassetid://1014411816"
+      char.Animate.climb.ClimbAnim.AnimationId = "rbxassetid://1014380606"
+   end,
+})
+
 
  local Tab = Window:CreateTab("Misc", 4483362458) -- Title, Image
 
@@ -336,4 +389,3 @@ local Button = Tab:CreateButton({
         Rayfield:Destroy()
     end,
  })
-
