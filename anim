@@ -1,3 +1,6 @@
+get.genv().adance = true
+
+while adance == true do
 local char = game.Players.LocalPlayer.Character
 char.Animate.run.RunAnim.AnimationId = "rbxassetid://656118852"
 char.Animate.walk.WalkAnim.AnimationId = "rbxassetid://10921076136"
@@ -7,3 +10,5 @@ char.Animate.fall.FallAnim.AnimationId = "rbxassetid://656115606"
 char.Animate.swim.Swim.AnimationId = "rbxassetid://656119721"
 char.Animate.swimidle.SwimIdle.AnimationId = "rbxassetid://656121397"
 char.Animate.climb.ClimbAnim.AnimationId = "rbxassetid://656114359"
+wait(0.5)
+end
